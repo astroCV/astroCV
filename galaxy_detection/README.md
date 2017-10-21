@@ -21,3 +21,23 @@ Compile darknet from the original repository or from data/darknet using make.
 Notice that in data/darknet/Makefile you must set GPU=1 for CUDA usage and ARCH parameter depending on your graphics card.
 
 Just run jupyter-notebook on examples
+
+## Train your own Dataset
+
+In training folder you will find the scripts to generate the training data for DARKNET.
+
+Configuration files data/sdss.cfg, data/sdss.data and data/sdss.names can be used for the training, yust uncomment lines 5 & 6.
+
+To begin the training using two GPU cards you can use a command like:
+
+./darknet detector train cfg/sdss.data cfg/yolo.cfg darknet19_448.conv.23 -gpus 0,1
+
+You can stop the training and restart using a command like:
+
+./darknet detector train cfg/sdss.data cfg/yolo.cfg result/yolo.backup -gpus 0,1
+
+Test on a single image:
+
+./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_backup.weights image.jpg 
+
+Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
