@@ -1,0 +1,7 @@
+classes= 5
+train  = /mnt/data2/sdss/yolo/train.txt
+#valid  = coco_testdev
+valid = /mnt/data2/sdss/yolo/val.txt
+names = ../sdss.names
+backup = /mnt/data2/sdss/result
+#eval=coco
