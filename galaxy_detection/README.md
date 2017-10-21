@@ -8,7 +8,7 @@ We train the network with nearly 20000 galaxies located in nearly 7000 SDSS imag
 
 ##
 
-Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvZUl3N0VGSklrOG8/view?usp=sharing)
+Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing)
 
 
 ## Requeriments
