@@ -19,3 +19,5 @@ Download [pyyolo](https://github.com/astroCV/pyyolo) wrapper.
 
 Compile darknet from the original repository or from data/darknet using make. 
 Notice that in data/darknet/Makefile you must set GPU=1 for CUDA usage and ARCH parameter depending on your graphics card.
+
+Just run jupyter-notebook on examples
