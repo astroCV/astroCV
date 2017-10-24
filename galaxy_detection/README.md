@@ -6,7 +6,10 @@ Training was made using images from SDSS in r,g,i bands converted to RGB color s
 Galaxy classification was taken from [Galaxy Zoo](https://www.galaxyzoo.org/).
 We train the network with nearly 20000 galaxies located in nearly 7000 SDSS images, with 5 classiffications: elliptical, spiral, edge-on, DK, merge.
 
-##
+![CNN layers](data/fig1.png)
+
+
+## Trained Networks
 
 Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing) for Lupton i,r,g -> RGB images
 
@@ -23,6 +26,8 @@ Compile darknet from the original repository or from data/darknet using make.
 Notice that in data/darknet/Makefile you must set GPU=1 for CUDA usage and ARCH parameter depending on your graphics card.
 
 Just run jupyter-notebook on examples
+
+![Detecion and Classification over SDSS RGB image](data/sample.jpg)
 
 ## Train your own Dataset
 
