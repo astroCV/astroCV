@@ -8,7 +8,7 @@ We train the network with nearly 20000 galaxies located in nearly 7000 SDSS imag
 
 ##
 
-Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing) for Lupton r,g,i -> RGB images
+Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing) for Lupton i,r,g -> RGB images
 
 This other network from [Here](https://drive.google.com/file/d/0B8RHInq4tQDvYkN5MFV0S2VTV1U/view?usp=sharing) trained for high contrast or saturated RGB images such as HST deep field images. 
 
