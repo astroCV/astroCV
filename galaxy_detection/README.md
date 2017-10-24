@@ -31,7 +31,7 @@ Just run jupyter-notebook on examples
 
 ## Train your own Dataset
 
-In training folder you will find the scripts to generate the training data for DARKNET.
+In training folder you will find the scripts to generate the training data for DARKNET for 5 classes. A custom number of classes need to change scripts and configuration files(detailed tutorial coming soon!)
 
 Configuration files data/sdss.cfg, data/sdss.data and data/sdss.names can be used for the training, yust uncomment lines 5 & 6.
 
