@@ -1,0 +1,4 @@
+# Tile	Filter	Image		Weightmap
+1	g	survey_tile1_g_ALIGNi.fits	survey_tile1_g_ALIGNi.WEIGHT.fits
+1	r	survey_tile1_r_ALIGNi.fits	survey_tile1_r_ALIGNi.WEIGHT.fits
+1	i	survey_tile1_i.fits			survey_tile1_i.WEIGHT.fits
