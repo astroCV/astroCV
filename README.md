@@ -4,6 +4,13 @@ AstroCV (<http://astrocv.github.io>) is a package intended to contain computer v
 
 For installation instructions, see the online documentation or docs/install.rst in this source distribution.
 
+## Download data
+
+[Download NGFS data](https://www.scidrive.org/scidrive/scidrive.html?share=OGDXRuYTNlgvgti)
+
+[Download AstroCV data](https://www.scidrive.org/scidrive/scidrive.html?share=7YANf7V8SnBzIgi)
+
+
 ## License
 Astropy is licensed under a 3-clause BSD style license - see the
 ``licenses/LICENSE.rst`` file.
