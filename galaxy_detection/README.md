@@ -6,7 +6,7 @@ Training was made using images from SDSS in r,g,i bands converted to RGB color s
 Galaxy classification was taken from [Galaxy Zoo](https://www.galaxyzoo.org/).
 We train the network with nearly 20000 galaxies located in nearly 7000 SDSS images, with 5 classiffications: elliptical, spiral, edge-on, DK, merge.
 
-![CNN layers](data/fig1.png)
+![CNN layers](data/yolo_v2_network.png)
 
 
 ## Trained Networks
