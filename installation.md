@@ -23,18 +23,16 @@ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavform
 
 ## Installing CUDA
 
-Now we will install CUDA 9.1 (Latest version at Jan 2017). First, check that you have NVIDIA drivers installed with
+Now we will install CUDA 8.0 First, check that you have NVIDIA drivers installed with
 ```
 nvidia-smi
 ```
 Download the CUDA .dev files from [https://developer.nvidia.com/cuda-downloads]. You might want to sign up with an account, since you'll need it later for CUDNN installation. From the terminal, go to the path where you downloaded the files and run
 
 ```
-sudo dpkg -i cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb 
-sudo apt-key add /var/cuda-repo-9-1-local/7fa2af80.pub
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb 
 sudo apt-get update
 sudo apt-get install cuda
-run $ export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
 ```
 
 Now, you need to create a file called _nvidia-persistenced.service_ (it doesn't matter where you create it, you can delete it later.). Paste the following text into that file:
