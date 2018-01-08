@@ -1,7 +1,7 @@
-#Installation guide AstroCV
+# Installation guide AstroCV
 The following steps have been tested with Ubuntu 16.04 and Python 2.7. The GPU used is Nvidia GTX1060. For every requisite for AstroCV, you can follow the respective installation guide, but the main steps will still be included here.
 
-##Required packages
+## Required packages
 First, we download all packages required for the libraries. In terminal, input the following commands.
 
 
@@ -19,4 +19,4 @@ sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 ```
 
-##Installing CUDA
+## Installing CUDA
