@@ -31,7 +31,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 
 
-## Installing CUDA
+## Installing CUDA 8.0
 
 Now we will install CUDA 8.0 First, check that you have NVIDIA drivers installed with
 ```
@@ -60,7 +60,7 @@ export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}" into ~/.bashrc
 
 ```
 
-###Installing cuDNN
+## Installing cuDNN 5.1
 
 Download Runtime Library, Developer Library and Code Samples .deb files from [https://developer.nvidia.com/rdp/cudnn-download]. You want to download cuDNN 5.1 for CUDA 8.0.
 
@@ -85,7 +85,7 @@ $make clean && make
 If the installation was successful, you will read a message similar to "Test passed!"
 
 
-## Installing OpenCV
+## Installing OpenCV 3.3.0
 
 For both OpenCV and PyYOLO, I created the ~/git folder (in Home), where I'll download all clones from github. All path references will be done considering this.
 
@@ -137,7 +137,7 @@ rm -rf build
 python setup_gpu.py build
 sudo python setup_gpu.py install
 ```
-`
+
 You can check the installation by importing pyyolo (import pyyolo) in any Python enviroment.
 
 ## Preparing AstroCV
