@@ -17,7 +17,6 @@ sudo pip install astropy --no-deps
 sudo pip install astroquery
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavformat-dev libswscale-dev
 sudo apt-get install curl m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
-sudo apt install
 sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get install libatlas-base-dev
 sudo apt-get install --assume-yes unzip ffmpeg qtbase5-dev
