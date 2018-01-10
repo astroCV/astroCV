@@ -2,7 +2,7 @@
 The following steps have been tested with Ubuntu 16.04 and Python 2.7. The GPU used is Nvidia GTX1060. For every requisite for AstroCV, you can follow the respective installation guide, but the main steps will still be included here.
 
 ## Required packages
-First, we download all packages required for the libraries. In terminal, input the following commands.
+First, we'll download every package required. In terminal, run the following commands.
 
 
 ```
@@ -33,9 +33,20 @@ sudo apt-get update && sudo apt-get upgrade
 
 ## Installing CUDA 8.0
 
-Now we will install CUDA 8.0 First, check that you have NVIDIA drivers installed with
+Now we will install CUDA 8.0. Before we begin, check that you have NVIDIA drivers installed with
 ```
 nvidia-smi
+```
+
+If you don't have the NVIDIA drivers, open a terminal and run
+
+```
+sudo apt-get purge nvidia* 
+sudo add-apt-repository ppa:graphics-drivers
+sudo apt-get update 
+sudo apt-get install nvidia-384 ##Replace 384 for the version you want. 384 was the latest version up to January 2018.
+
+
 ```
 Download the CUDA .dev files from [https://developer.nvidia.com/cuda-80-download-archive]. You might want to sign up with an account, since you'll need it later for CUDNN installation. From the terminal, go to the path where you downloaded the files and run
 
