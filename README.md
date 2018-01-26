@@ -8,7 +8,7 @@ For installation instructions, see the online documentation or installation_guid
 
 ### galaxy_detection
 
-Four examples can be found in this folder. These examples show detections in different images. The first and second example work with .jpg images. The third example downloads images from the web. The fourth example processes three .fits images for the same photo (i, r and g filters), then applies different filters to the rgb matrix (e.g. lupton, sqrt) and finally it analyzes the image. The code is able to iterate over large numbers of .fits. You can uncomment the triple hashed comments to have this example also save the processed .jpg images.
+Four examples can be found in this folder. These examples show detections in different images. The first and second example work with .jpg images. The third example downloads images from the web. The fourth example processes three .fits images for the same photo (i, r and g filters), then applies different filters to the rgb matrix (e.g. lupton, sqrt) and finally tests the detector with the images. 
 
 In the traning folder, you can find .py codes to download the images from SDSS and prepare the training.
 
