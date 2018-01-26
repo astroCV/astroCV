@@ -1,6 +1,7 @@
 # Galaxy Detection and Classification in SDSS using deep learning
 
 The examples show how to detect and classify galaxies in SDSS images using [YOLO](https://github.com/astroCV/darknet).
+First example tests the detector with a local .jpg. Second one also tests on a local .jpg, but if said .jpg doesn't exist, it loads an image from the web. Third example tests the detector in images with different aspect ratios. Fourth example generates a .jpg from three .fits images, then applies different filters to the image (e.g. lupton, sqrt, log) and finally tests the detector in different filters for comparison.
 
 Training was made using images from SDSS in r,g,i bands converted to RGB color scale using [make_lupton_rgb](http://docs.astropy.org/en/stable/api/astropy.visualization.make_lupton_rgb.html) method.
 Galaxy classification was taken from [Galaxy Zoo](https://www.galaxyzoo.org/).
