@@ -34,18 +34,40 @@ Just run jupyter-notebook on examples
 
 In training folder you will find the scripts to generate the training data for DARKNET for 5 classes. A custom number of classes need to change scripts and configuration files(detailed tutorial coming soon!)
 
-Configuration files data/sdss.cfg, data/sdss.data and data/sdss.names can be used for the training, yust uncomment lines 5 & 6.
+All scripts assume the .py is located in /mnt/data3/sdss . This is the path of these scripts in our local computer, change it accordingly.
+
+You can use as configuration files sdss.data and sdss.cfg, located in the /data folder.
+
+In sdss.data you need to specify paths to the train and val text files which have the paths for all images and labels respectively. Paths are relative to darknet path. In backup, set the path where the training weights will be saved.
+
+In names, sdss.names includes in each line the name of the different classes. The first line will be class 0 (according to the darknet label format), the second line will be class 1 and so on.
+
+In sdss.cfg you can configure different CNN parameters. In \[region\] you need to change the classes number if you add or remove classes.
+
+Note that, since data is obtained from SDSS, you can’t add a priori a lot of extra classes. You can check all classes available in the SDSS table [here](https://skyserver.sdss.org/dr12/en/help/browser/browser.aspx#&&history=description+zooSpec+U)
+
+Now that every file is configured, open a terminal in the darknet folder.
 
 To begin the training using two GPU cards you can use a command like:
 
 ./darknet detector train cfg/sdss.data cfg/yolo.cfg darknet19_448.conv.23 -gpus 0,1
 
-You can stop the training and restart using a command like:
+
+If you need to stop the traning, you can resume it running in a terminal in the darknet folder a command like:
 
 ./darknet detector train cfg/sdss.data cfg/yolo.cfg result/yolo.backup -gpus 0,1
 
+To recall a .weights file to test it and check IOU and recall, run in a terminal in the darknet folder something like:
+
+./darknet detector recall cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights -gpus 0,1
+
+This example is testing the weights obtained after 400 iterations
+
+
 Test on a single image:
 
-./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_backup.weights image.jpg 
+./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights image.jpg
+
+Basically, the syntax is ./darknet detector *action *path/to/.data *path/to/.cfh *path/to/weights -gpus *gpus to use
 
 Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
