@@ -17,16 +17,11 @@ Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8R
 This other network from [Here](https://drive.google.com/file/d/0B8RHInq4tQDvYkN5MFV0S2VTV1U/view?usp=sharing) trained for high contrast or saturated RGB images such as HST deep field images. 
 
 
-## Requeriments
+## Requeriments, install and run
 
-Download [pyyolo](https://github.com/astroCV/pyyolo) wrapper.
+For detailed installing instructions, check the installation_guide.md file in the main AstroCV folder
 
-## Install and run
-
-Compile darknet from the original repository or from data/darknet using make. 
-Notice that in data/darknet/Makefile you must set GPU=1 for CUDA usage and ARCH parameter depending on your graphics card.
-
-Just run jupyter-notebook on examples
+To check examples, run them on jupyter notebook.
 
 ![Detecion and Classification over SDSS RGB image](data/sample.jpg)
 
@@ -49,25 +44,27 @@ Note that, since data is obtained from SDSS, you can’t add a priori a lot of e
 Now that every file is configured, open a terminal in the darknet folder.
 
 To begin the training using two GPU cards you can use a command like:
-
+```
 ./darknet detector train cfg/sdss.data cfg/yolo.cfg darknet19_448.conv.23 -gpus 0,1
-
+```
 
 If you need to stop the traning, you can resume it running in a terminal in the darknet folder a command like:
-
+```
 ./darknet detector train cfg/sdss.data cfg/yolo.cfg result/yolo.backup -gpus 0,1
-
+```
 To recall a .weights file to test it and check IOU and recall, run in a terminal in the darknet folder something like:
-
+```
 ./darknet detector recall cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights -gpus 0,1
-
+```
 This example is testing the weights obtained after 400 iterations
 
 
 Test on a single image:
-
+```
 ./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights image.jpg
-
-Basically, the syntax is ./darknet detector *action *path/to/.data *path/to/.cfh *path/to/weights -gpus *gpus to use
-
+```
+Basically, the syntax is 
+```
+./darknet detector \*action \*path/to/.data \*path/to/.cfh \*path/to/weights -gpus \*gpus to use
+```
 Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
