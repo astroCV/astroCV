@@ -71,6 +71,6 @@ $ ./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights ima
 ```
 Basically, the syntax is 
 ```
-$ ./darknet detector \*action \*path/to/.data \*path/to/.cfh \*path/to/weights -gpus \*gpus to use
+$ ./darknet detector *action *path/to/.data *path/to/.cfh *path/to/weights -gpus *gpus to use
 ```
 Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
