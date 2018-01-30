@@ -1,6 +1,8 @@
 # Installation guide AstroCV
 The following steps have been tested with Ubuntu 16.04 and Python 2.7. The GPU used is Nvidia GTX1060. For every requisite for AstroCV, you can follow the respective installation guide, but the main steps will still be included here.
 
+Check you have the mentioned versions of CUDA, OpenCV and cuDNN. Darknet can have issues with more recent versions of those libraries.
+
 ## Required packages
 First, we'll download every package required. In terminal, run the following commands.
 
