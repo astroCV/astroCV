@@ -10,11 +10,11 @@ We train the network with nearly 20000 galaxies located in nearly 7000 SDSS imag
 ![CNN layers](data/yolo_v2_network.png)
 
 
-## Trained Networks
+## Trained AstroCV Networks
 
-Download trained network from [Here(200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing) for Lupton i,r,g -> RGB images
+Download trained network from [Here (200Mb)](https://drive.google.com/file/d/0B8RHInq4tQDvTTliOEt0SFViWDg/view?usp=sharing) for Lupton i,r,g -> RGB images
 
-This other network from [Here](https://drive.google.com/file/d/0B8RHInq4tQDvYkN5MFV0S2VTV1U/view?usp=sharing) trained for high contrast or saturated RGB images such as HST deep field images. 
+This other network from [Here](https://drive.google.com/file/d/0B8RHInq4tQDvYkN5MFV0S2VTV1U/view?usp=sharing) trained for high contrast or saturated RGB images such as HST deep field images.
 
 
 ## Requeriments, install and run
@@ -41,30 +41,36 @@ In sdss.cfg you can configure different CNN parameters. In \[region\] you need t
 
 Note that, since data is obtained from SDSS, you can’t add a priori a lot of extra classes. You can check all classes available in the SDSS table [here](https://skyserver.sdss.org/dr12/en/help/browser/browser.aspx#&&history=description+zooSpec+U)
 
+You need a base .weights file to start traning. Download the pretrained starting running in a terminal
+
+```
+$ wget https://pjreddie.com/media/files/darknet19_448.conv.23
+```
+
 Now that every file is configured, open a terminal in the darknet folder.
 
 To begin the training using two GPU cards you can use a command like:
 ```
-./darknet detector train cfg/sdss.data cfg/yolo.cfg darknet19_448.conv.23 -gpus 0,1
+$ ./darknet detector train cfg/sdss.data cfg/yolo.cfg darknet19_448.conv.23 -gpus 0,1
 ```
 
 If you need to stop the traning, you can resume it running in a terminal in the darknet folder a command like:
 ```
-./darknet detector train cfg/sdss.data cfg/yolo.cfg result/yolo.backup -gpus 0,1
+$ ./darknet detector train cfg/sdss.data cfg/yolo.cfg result/yolo.backup -gpus 0,1
 ```
 To recall a .weights file to test it and check IOU and recall, run in a terminal in the darknet folder something like:
 ```
-./darknet detector recall cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights -gpus 0,1
+$ ./darknet detector recall cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights -gpus 0,1
 ```
 This example is testing the weights obtained after 400 iterations
 
 
 Test on a single image:
 ```
-./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights image.jpg
+$ ./darknet detector test cfg/sdss.data cfg/yolo.cfg result/yolo_400.weights image.jpg
 ```
 Basically, the syntax is 
 ```
-./darknet detector \*action \*path/to/.data \*path/to/.cfh \*path/to/weights -gpus \*gpus to use
+$ ./darknet detector \*action \*path/to/.data \*path/to/.cfh \*path/to/weights -gpus \*gpus to use
 ```
 Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
