@@ -1,16 +1,20 @@
 ## AstroCV
 
-AstroCV (<http://astrocv.github.io>) is a package intended to contain computer vision algorithms and methods for processing and analyzing astronomical datasets. The main goal is developing and promoting the use of modern computer vision algorithms for solving scientific problems in Astronomy.
+[AstroCV](https://github.com/astroCV/astroCV) is a package intended to contain computer vision algorithms and methods for processing and analyzing astronomical datasets. The main goal is developing and promoting the use of modern computer vision algorithms for solving scientific problems in astronomy.
 
-For installation instructions, see the online documentation or installation_guide.md in this source distribution.
+For installation instructions, see the online documentation for required libraries or check the installation guide installation_guide.md in this source distribution.
+
+The paper on AstroCV is in the file astrocv_computer_vision.pdf in the main folder.
 
 ## Contents
 
 ### galaxy_detection
 
+In README.md you can find a detailed guide on how to train your own network.
+
 Four examples can be found in this folder. These examples show detections in different images. The first and second example work with .jpg images. The third example downloads images from the web. The fourth example processes three .fits images for the same photo (i, r and g filters), then applies different filters to the rgb matrix (e.g. lupton, sqrt) and finally tests the detector with the images. 
 
-In the traning folder, you can find .py codes to download the images from SDSS and prepare the training.
+In the traning folder, you can find .py codes to download the images from SDSS, convert them into .jpg and process and prepare files to be traning ready.
 
 ### tutorials
 
