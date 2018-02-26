@@ -73,4 +73,13 @@ Basically, the syntax is
 ```
 $ ./darknet detector *action *path/to/.data *path/to/.cfh *path/to/weights -gpus *gpus to use
 ```
-Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations.
+## Tranings
+The first traning used only images made using a Lupton filter. Two tranings were made, one using a simple Lupton filter and a second one using a high contrast Lupton filter. Using nearly 20000 galaxies we stopped training around 20000 iterations, and notice best convergence around 15000 iterations. However, for a custom dataset the only way to check convergence is compute the recall ration for different iterations. The following graph shows the RoC curve for these trainings.
+
+![RoC first tranings](https://image.ibb.co/kUrpQn/RoC1.png)
+
+The second traning was made using the same imageset, but with five different filters: Lupton high contrast, simple Lupton, two sinh filters and a blue enhanced sqrt filter. We stopped at 30000 iterations, noticed the best RoC at 30000 iterations but the 14000 iteration weights showed best results in test images. The following graph shows the RoC curve for this training.
+
+![Roc second traning](https://image.ibb.co/g7eLWS/graph4.jpg)
+
+You can download all weights files [here](https://www.scidrive.org/scidrive/scidrive.html?share=ELgcG8nGrdvcNsF#/)
