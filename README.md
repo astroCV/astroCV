@@ -4,7 +4,7 @@
 
 For installation instructions, see the online documentation for required libraries or check the installation guide installation_guide.md in this source distribution.
 
-The paper on AstroCV is in the file astrocv_computer_vision.pdf in the main folder.
+The paper on AstroCV is in this file (https://github.com/astroCV/astroCV/blob/master/ASTROCV_ASCOM_ACCEPTED_ARXIV_VERSION.pdf)
 
 ## Contents
 
