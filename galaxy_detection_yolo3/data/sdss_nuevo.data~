@@ -1,0 +1,7 @@
+classes = 3
+train  = /mnt/data3/sdss/trainall/trainall.txt
+#valid  = coco_testdev
+valid = /mnt/data3/sdss/trainall/valall.txt
+names = sdss.names
+backup = /mnt/data3/sdss/result
+#eval=coco
